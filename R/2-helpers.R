@@ -1,4 +1,3 @@
-
 # Generate data
 data_gen <- function() {
   comp_data <-
@@ -16,7 +15,7 @@ data_gen <- function() {
         byrow = TRUE
       )
     ) %>%
-    data.frame() %>% 
+    data.frame() %>%
     as_tibble()
 }
 
@@ -30,21 +29,20 @@ amp <- function(i, j) {
 # True model
 true_model <- function() {
   fit <- lm(X1 ~ X2 + X3 + X4, data = data_gen())
-  true_summary <- 
+  true_summary <-
     fit %>%
     tidy() %>%
     bind_cols(
-      fit %>% 
-        confint() %>% 
-        as_tibble() %>% 
+      fit %>%
+        confint() %>%
+        as_tibble() %>%
         rename("conf_lower" = "2.5 %", "conf_upper" = "97.5 %")
-    ) %>% 
+    ) %>%
     mutate(
-      r2 = fit %>% 
-        glance() %>% 
+      r2 = fit %>%
+        glance() %>%
         .$r.squared,
       term = c("b0", "b1", "b2", "b3")
-    ) 
+    )
   true_summary
 }
-

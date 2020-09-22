@@ -1,4 +1,3 @@
-
 source("plots/thesis-theme.R")
 
 df <-
@@ -25,7 +24,6 @@ df %>%
   geom_segment(aes(x = X2, y = X1, xend = X2, yend = Fitted)) +
   expand_limits(x = 0, y = 0) +
   labs(x = "x", y = "y") +
-  theme_thesis() 
+  theme_thesis()
 
 ggsave("regplot.pdf", device = cairo_pdf, width = 20, height = 12, units = "cm")
-

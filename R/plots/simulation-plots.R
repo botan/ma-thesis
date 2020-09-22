@@ -32,7 +32,7 @@ df %>%
     name = "Düzen:",
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
-  theme_thesis() + 
+  theme_thesis() +
   facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b1bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
@@ -242,4 +242,3 @@ df %>%
   facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("r2bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
-

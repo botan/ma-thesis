@@ -1,4 +1,3 @@
-
 source("plots/thesis-theme.R")
 
 grid <- rnorm(1000)
@@ -7,20 +6,20 @@ ml <- 1 - mr
 mm <- plogis(0.75 - abs(grid))
 mt <- plogis(-0.75 + abs(grid))
 
-miss <- 
-  c("RIGHT", "LEFT", "TAIL", "MID") %>% 
+miss <-
+  c("RIGHT", "LEFT", "TAIL", "MID") %>%
   factor(ordered = TRUE, levels = c("RIGHT", "LEFT", "TAIL", "MID"))
 
-credit_factor_ordered <- 
+credit_factor_ordered <-
   factor(credit_rating, ordered = TRUE, levels = c("AAA", "AA", "A", "BBB"))
 
-miss <- 
+miss <-
   c(
     rep("RIGHT", length(grid)),
     rep("LEFT", length(grid)),
     rep("MID", length(grid)),
     rep("TAIL", length(grid))
-  ) %>% 
+  ) %>%
   factor(levels = c("RIGHT", "LEFT", "TAIL", "MID"))
 
 df <-
@@ -47,4 +46,3 @@ df %>%
   )
 
 ggsave("mardistplot.pdf", device = cairo_pdf, width = 20, height = 12, units = "cm")
-

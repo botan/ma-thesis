@@ -1,20 +1,19 @@
-
 source("plots/thesis-theme.R")
 
 n <- 1000
-y <- 
-  MASS::mvrnorm(
-    n = n, 
+y <-
+  mvrnorm(
+    n = n,
     mu = c(0, 0),
     Sigma = matrix(c(1, 0.75, 0.75, 1), nrow = 2)
   )
 
-y3 <- rbind(y,y,y,y)
+y3 <- rbind(y, y, y, y)
 
-p2_marright <- 1 - plogis(y[,1])
-p2_marleft <- plogis(y[,1])
-p2_marmid <- 1 - plogis(0.75 - abs(y[,1]))
-p2_martail <- 1 - plogis(0.75 + abs(y[,1]))
+p2_marright <- 1 - plogis(y[, 1])
+p2_marleft <- plogis(y[, 1])
+p2_marmid <- 1 - plogis(0.75 - abs(y[, 1]))
+p2_martail <- 1 - plogis(0.75 + abs(y[, 1]))
 
 r2_marright <- rbinom(n, 1, p2_marright)
 r2_marleft <- rbinom(n, 1, p2_marleft)
@@ -29,7 +28,7 @@ typ <- factor(
   labels = c("SAĞDANRK", "SOLDANRK", "UÇLARDANRK", "MERKEZDENRK")
 )
 
-df <- tibble(y1 = y3[,1], y2 = y3[,2], r2 = r2, typ = typ)
+df <- tibble(y1 = y3[, 1], y2 = y3[, 2], r2 = r2, typ = typ)
 
 # Show mar models affects with boxplot
 df %>%
@@ -51,4 +50,3 @@ df %>%
   facet_wrap(typ ~ ., scale = "free_x", strip.position = "left", ncol = 1)
 
 ggsave("marplotbox.pdf", device = cairo_pdf, width = 20, height = 19, units = "cm")
-

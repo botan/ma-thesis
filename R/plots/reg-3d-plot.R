@@ -1,9 +1,8 @@
-
 source("plots/thesis-theme.R")
 
 pdf(file = "reg3Dplot.pdf", width = 6.6, height = 4.4)
 
-dm <- 
+dm <-
   mvrnorm(
     n = 100,
     mu = c(0, 0, 0),
@@ -24,14 +23,14 @@ z <- dm[, 3]
 fit <- lm(y ~ x + z)
 
 # scatterplot
-s3d <- 
+s3d <-
   scatterplot3d(
     x, z, y,
-    pch = 19, 
+    pch = 19,
     type = "p",
-    color = "#0EB6D1", 
+    color = "#0EB6D1",
     lwd = 5,
-    grid = TRUE, 
+    grid = TRUE,
     box = FALSE,
     xlab = TeX("x_{1}"),
     ylab = TeX("x_{2}"),
@@ -52,7 +51,7 @@ segments(
 # draw the regression plane
 s3d$plane3d(
   fit,
-  draw_polygon = TRUE, 
+  draw_polygon = TRUE,
   draw_lines = TRUE,
   polygon_args = list(col = rgb(.9, .1, .3, .6))
 )
@@ -70,4 +69,3 @@ s3d$points3d(
 )
 
 dev.off()
-

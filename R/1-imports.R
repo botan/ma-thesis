@@ -1,4 +1,4 @@
-# If a package is installed, it will be loaded. If any are not, 
+# If a package is installed, it will be loaded. If any are not,
 # the missing package(s) will be installed and loaded.
 
 # Required packages
@@ -24,4 +24,3 @@ invisible(lapply(packages, library, character.only = TRUE))
 
 # Clean global environment
 rm(packages, installed_packages)
-

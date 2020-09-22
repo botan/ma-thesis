@@ -1,8 +1,7 @@
-
 source("plots/thesis-theme.R")
 
 # Get CRAN stats for packages and tidy it
-packs <- 
+packs <-
   dlstats::cran_stats(
     packages = c("mice", "mi", "Amelia", "pan"),
     use_cache = TRUE
@@ -22,4 +21,3 @@ ggplot(packs, aes(x = end, y = downloads, color = package)) +
   theme_thesis()
 
 ggsave("packagesplot.pdf", device = cairo_pdf, width = 18, height = 12, units = "cm")
-
