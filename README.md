@@ -2,6 +2,8 @@
 
 Bu depo yüksek lisans tezimin kaynak kodlarını içermektedir.
 
+---
+
 ## Multiple Imputation by Chained Equations: A Simulation Study
 
 This repository contains my master thesis files.
@@ -25,4 +27,11 @@ MASS_7.3-53
 mice_3.11.0 
 scatterplot3d_0.3-41
 tidyverse_1.3.0  
+
+Conflicts:
+dplyr::filter() masks stats::filter()
+dplyr::lag()    masks stats::lag()
+dplyr::select() masks MASS::select()
+mice::cbind()   masks base::cbind()
+mice::rbind()   masks base::rbind()
 ```
