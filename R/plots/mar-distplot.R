@@ -7,13 +7,6 @@ mm <- plogis(0.75 - abs(grid))
 mt <- plogis(-0.75 + abs(grid))
 
 miss <-
-  c("RIGHT", "LEFT", "TAIL", "MID") %>%
-  factor(ordered = TRUE, levels = c("RIGHT", "LEFT", "TAIL", "MID"))
-
-credit_factor_ordered <-
-  factor(credit_rating, ordered = TRUE, levels = c("AAA", "AA", "A", "BBB"))
-
-miss <-
   c(
     rep("RIGHT", length(grid)),
     rep("LEFT", length(grid)),
