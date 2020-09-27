@@ -14,12 +14,9 @@ ggplot(packs, aes(x = end, y = downloads, color = package)) +
   geom_line(size = 1) +
   labs(
     x = "Yıllar",
-    y = "Aylık toplam indirilme sayısı"
+    y = "Aylık toplam indirilme sayısı",
+    color = "Paketler:"
   ) +
-  theme_thesis()  +
-  scale_colour_discrete(
-    guide = "legend",
-    name = "Paketler:"
-  )
+  theme_thesis()
 
 ggsave("packagesplot.pdf", device = cairo_pdf, width = 18, height = 12, units = "cm")
