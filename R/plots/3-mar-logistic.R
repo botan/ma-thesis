@@ -1,4 +1,4 @@
-source("plots/thesis-theme.R")
+source("plots/0-theme.R")
 
 grid <- rnorm(1000)
 mr <- plogis(grid)

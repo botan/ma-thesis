@@ -1,4 +1,4 @@
-source("plots/thesis-theme.R")
+source("plots/0-theme.R")
 
 pdf(file = "reg3Dplot.pdf", width = 6.6, height = 4.4)
 

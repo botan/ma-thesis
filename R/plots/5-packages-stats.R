@@ -1,4 +1,4 @@
-source("plots/thesis-theme.R")
+source("plots/0-theme.R")
 
 # Get CRAN stats for packages and tidy it
 packs <-
@@ -14,10 +14,12 @@ ggplot(packs, aes(x = end, y = downloads, color = package)) +
   geom_line(size = 1) +
   labs(
     x = "Yıllar",
-    y = "Aylık toplam indirilme sayısı",
-    color = "Paketler"
+    y = "Aylık toplam indirilme sayısı"
   ) +
-  scale_colour_thesis() +
-  theme_thesis()
+  theme_thesis()  +
+  scale_colour_discrete(
+    guide = "legend",
+    name = "Paketler:"
+  )
 
 ggsave("packagesplot.pdf", device = cairo_pdf, width = 18, height = 12, units = "cm")

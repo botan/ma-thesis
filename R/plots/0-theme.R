@@ -21,16 +21,3 @@ theme_thesis <- function() {
       panel.grid.minor = element_blank()
     )
 }
-
-# Thesis theme colors
-scale_color_thesis <- function(...) {
-  discrete_scale(
-    "colour",
-    "thesis",
-    scales::manual_pal(values = c(
-      "#f87f01", "#7fc97f", "#ef3b2c", "#feca01",
-      "#a6cee3", "#fb9a99", "#984ea3", "#8C591D"
-    )),
-    ...
-  )
-}

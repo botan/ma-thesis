@@ -1,8 +1,8 @@
+# Load packages and theme
+source("plots/0-theme.R")
+
 # Get simulation outputs
 load("output.RData")
-
-# Load packages and theme
-source("plots/thesis-theme.R")
 
 # Define labels for methods
 labels_method <- c(
