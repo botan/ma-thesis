@@ -33,7 +33,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b1bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -57,7 +57,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b1coverage.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -79,7 +79,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b1width.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -102,7 +102,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b2bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -126,7 +126,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b2coverage.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -148,7 +148,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b2width.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -171,7 +171,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b3bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -195,7 +195,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b3coverage.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -217,7 +217,7 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("b3width.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
 
@@ -239,6 +239,6 @@ df %>%
     labels = c("SAĞDANRK", "UÇLARDANRK", "MERKEZDENRK")
   ) +
   theme_thesis() +
-  facet_wrap(~method, labeller = labels_method, scales = "free_x", ncol = 2)
+  facet_wrap(~ method, labeller = labels_method, scales = "free_x", ncol = 2)
 
 ggsave("r2bias.pdf", device = cairo_pdf, width = 20, height = 25, units = "cm")
